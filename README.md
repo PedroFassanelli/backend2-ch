@@ -1,14 +1,22 @@
-Este proyecto implementa un sistema de gestión de usuarios con autenticación y autorización usando Node.js, Express, MongoDB y JWT. Forma parte de la entrega N°1 del curso de Backend II.
+# Entrega N°1 - Backend II
 
-✅ Funcionalidades implementadas
-CRUD completo de usuarios (GET, POST, PUT, DELETE)
-Contraseñas encriptadas con bcrypt
-Autenticación con JWT
-Estrategia de autenticación con Passport
-Ruta /api/sessions/current protegida para validar sesión actual
-Middleware isAdmin para proteger acciones sensibles
+Este proyecto implementa un sistema de **gestión de usuarios** con autenticación y autorización usando Node.js, Express, MongoDB y JWT. Forma parte de la entrega N°1 del curso de Backend II.
 
-Rutas Principales
+---
+
+## ✅ Funcionalidades implementadas
+
+- CRUD completo de usuarios (`GET`, `POST`, `PUT`, `DELETE`)
+- Contraseñas encriptadas con **bcrypt**
+- Autenticación con **JWT**
+- Estrategia de autenticación con **Passport**
+- Ruta `/api/sessions/current` protegida para validar sesión actual
+- Middleware `isAdmin` para proteger acciones sensibles
+
+---
+
+## Rutas Principales
+
 | Método | Endpoint                | Descripción                                 |
 | ------ | ----------------------- | ------------------------------------------- |
 | POST   | `/api/users`            | Crear usuario                               |
@@ -19,8 +27,11 @@ Rutas Principales
 | POST   | `/api/sessions/login`   | Iniciar sesión y obtener token              |
 | GET    | `/api/sessions/current` | Obtener info del usuario autenticado        |
 
-⚙️ Configuración del entorno
-Crear un archivo .env con el siguiente contenido:
-PORT=...
+## ⚙️ Configuración del entorno
+
+Crear un archivo `.env` con el siguiente contenido:
+
+```env
+PORT=3000
 MONGO_URL=mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/ecommerce?retryWrites=true&w=majority
-JWT_SECRET=clave
+JWT_SECRET=clave_super_secreta
